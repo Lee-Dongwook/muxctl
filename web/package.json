@@ -1,0 +1,12 @@
+{
+  "name": "muxctl-web",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "next": "^16.4.1"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "typescript": "^7.0.2"
+  }
+}
