@@ -8,14 +8,48 @@
 
 /* Begin PBXBuildFile section */
 		2B9602EE8ECD49CA3EFDB69E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44EEABDE419A85BBA4E99DF /* AppDelegate.swift */; };
+		452BC7DFBFBC8664FDF88638 /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = 02F5F8B243511A96D8FBC257 /* Auth */; };
+		A1BEFB38A947DA71EA66FC3D /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = BF205B12346E96B75539262D /* Auth */; };
+		D2CC7AFAC8B7A885F5CC4A74 /* MuxctlApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B33E6B62D05E4565209F87 /* MuxctlApp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2CC73862E8D04B5849FED44F /* muxctl.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = muxctl.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CC73862E8D04B5849FED44F /* muxctl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = muxctl.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D20481FC4B557B6E0F291AD /* Auth */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Auth; path = Packages/Shared/Auth; sourceTree = SOURCE_ROOT; };
+		48B33E6B62D05E4565209F87 /* MuxctlApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuxctlApp.swift; sourceTree = "<group>"; };
 		C44EEABDE419A85BBA4E99DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EEF2E3D8D8029BCB84321EDC /* muxctl-ios.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = "muxctl-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFrameworksBuildPhase section */
+		CF014C5E46DDF1CCD6DCA6C5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1BEFB38A947DA71EA66FC3D /* Auth in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7FF8134DEED4721BE9F8E65 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				452BC7DFBFBC8664FDF88638 /* Auth in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
 /* Begin PBXGroup section */
+		8DD9232DE7D94772B32777BC /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				48B33E6B62D05E4565209F87 /* MuxctlApp.swift */,
+			);
+			name = Sources;
+			path = ios/Sources;
+			sourceTree = "<group>";
+		};
 		8F23BD34633752810C914930 /* Source */ = {
 			isa = PBXGroup;
 			children = (
@@ -24,10 +58,20 @@
 			path = Source;
 			sourceTree = "<group>";
 		};
+		A73AA1A25AC7E4688D6F1D7E /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				2D20481FC4B557B6E0F291AD /* Auth */,
+			);
+			path = Packages;
+			sourceTree = "<group>";
+		};
 		BA8E41D6FB03FFFF3A0B5447 = {
 			isa = PBXGroup;
 			children = (
+				A73AA1A25AC7E4688D6F1D7E /* Packages */,
 				8F23BD34633752810C914930 /* Source */,
+				8DD9232DE7D94772B32777BC /* Sources */,
 				C5A879A5DA11C6AB578C7288 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -35,6 +79,7 @@
 		C5A879A5DA11C6AB578C7288 /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				EEF2E3D8D8029BCB84321EDC /* muxctl-ios.app */,
 				2CC73862E8D04B5849FED44F /* muxctl.app */,
 			);
 			name = Products;
@@ -43,11 +88,31 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		1A8A53388BC7AAB66A832964 /* muxctl-ios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18B7EAF5A29BEBF017EBDAC2 /* Build configuration list for PBXNativeTarget "muxctl-ios" */;
+			buildPhases = (
+				3399F29DF8331BCA1F3F869E /* Sources */,
+				F7FF8134DEED4721BE9F8E65 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "muxctl-ios";
+			packageProductDependencies = (
+				02F5F8B243511A96D8FBC257 /* Auth */,
+			);
+			productName = "muxctl-ios";
+			productReference = EEF2E3D8D8029BCB84321EDC /* muxctl-ios.app */;
+			productType = "com.apple.product-type.application";
+		};
 		FAADB9537036E1D92923A97D /* muxctl */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A5404505A58C252269B82EC1 /* Build configuration list for PBXNativeTarget "muxctl" */;
 			buildPhases = (
 				84C3D32127F4C5315D9CA566 /* Sources */,
+				CF014C5E46DDF1CCD6DCA6C5 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -55,6 +120,7 @@
 			);
 			name = muxctl;
 			packageProductDependencies = (
+				BF205B12346E96B75539262D /* Auth */,
 			);
 			productName = muxctl;
 			productReference = 2CC73862E8D04B5849FED44F /* muxctl.app */;
@@ -80,17 +146,29 @@
 			);
 			mainGroup = BA8E41D6FB03FFFF3A0B5447;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				6D3114F9AD970D787A8709F1 /* XCLocalSwiftPackageReference "Packages/Shared/Auth" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = C5A879A5DA11C6AB578C7288 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				FAADB9537036E1D92923A97D /* muxctl */,
+				1A8A53388BC7AAB66A832964 /* muxctl-ios */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3399F29DF8331BCA1F3F869E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2CC7AFAC8B7A885F5CC4A74 /* MuxctlApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		84C3D32127F4C5315D9CA566 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -102,6 +180,22 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		1B8C9609F87CBC3043A72ED4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.muxctl.ios;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		51EEAFEEA7A8663A5C7AD1B3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -147,13 +241,15 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 			};
 			name = Release;
 		};
@@ -161,13 +257,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COMBINE_HIDPI_IMAGES = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/Frameworks",
+					"@executable_path/../Frameworks",
 				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				PRODUCT_BUNDLE_IDENTIFIER = com.muxctl.app;
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
@@ -222,14 +318,32 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		9A77887D332FF6BB94F304F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.muxctl.ios;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -237,19 +351,28 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COMBINE_HIDPI_IMAGES = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/Frameworks",
+					"@executable_path/../Frameworks",
 				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				PRODUCT_BUNDLE_IDENTIFIER = com.muxctl.app;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		18B7EAF5A29BEBF017EBDAC2 /* Build configuration list for PBXNativeTarget "muxctl-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A77887D332FF6BB94F304F2 /* Debug */,
+				1B8C9609F87CBC3043A72ED4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
 		87B3A59EAA8E4F54F00D06FA /* Build configuration list for PBXProject "muxctl" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -269,6 +392,24 @@
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		6D3114F9AD970D787A8709F1 /* XCLocalSwiftPackageReference "Packages/Shared/Auth" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/Shared/Auth;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		02F5F8B243511A96D8FBC257 /* Auth */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Auth;
+		};
+		BF205B12346E96B75539262D /* Auth */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Auth;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 86C66D526859070ECEEA7803 /* Project object */;
 }

@@ -1,6 +1,32 @@
 name: muxctl
+options:
+  bundleIdPrefix: com.muxctl
+  deploymentTarget:
+    macOS: "14.0"
+    iOS: "17.0"
+packages:
+  Auth:
+    path: Packages/Shared/Auth
+settings:
+  base:
+    GENERATE_INFOPLIST_FILE: YES
+    SWIFT_VERSION: "6.0"
 targets:
   muxctl:
     type: application
-    platform: iOS
+    platform: macOS
     sources: [Source]
+    settings:
+      PRODUCT_BUNDLE_IDENTIFIER: com.muxctl.app
+    dependencies:
+      - package: Auth
+  muxctl-ios:
+    type: application
+    platform: iOS
+    sources: [ios/Sources]
+    settings:
+      PRODUCT_BUNDLE_IDENTIFIER: com.muxctl.ios
+      INFOPLIST_KEY_UILaunchScreen_Generation: YES
+      TARGETED_DEVICE_FAMILY: "1,2"
+    dependencies:
+      - package: Auth

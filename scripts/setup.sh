@@ -19,7 +19,7 @@ case "$("$ZIG" version 2>/dev/null)" in
   *) echo "need zig $want.x: brew install zig@$want (or ZIG=/path/to/zig)" >&2; exit 1 ;;
 esac
 
-(cd ghostty && "$ZIG" build -Demit-xcframework=true -Dxcframework-target=native -Doptimize=ReleaseFast)
+(cd ghostty && "$ZIG" build -Demit-xcframework=true -Dxcframework-target=universal -Doptimize=ReleaseFast)
 
 rm -rf GhosttyKit.xcframework
 cp -R ghostty/macos/GhosttyKit.xcframework .
