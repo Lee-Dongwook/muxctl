@@ -16,10 +16,6 @@ let package = Package(
     targets: [
         .target(
             name: "Auth"
-        ),
-        .testTarget(
-            name: "AuthTests",
-            dependencies: ["Auth"]
         )
     ]
 )

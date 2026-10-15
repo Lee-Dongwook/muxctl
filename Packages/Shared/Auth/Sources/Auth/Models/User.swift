@@ -22,7 +22,7 @@ public struct User: Codable, Equatable, Sendable {
         self.contentEnabled = contentEnabled
     }
 
-    private enum codeKeys: String, CodingKey {
+    private enum CodingKeys: String, CodingKey {
         case id
         case email
         case name
@@ -43,10 +43,10 @@ public struct User: Codable, Equatable, Sendable {
     }
 
     public static func contentEnabled(
-        any metadata: [String: Any]?
+        from metadata: [String: Any]?
     ) -> Bool {
         guard let value = metadata?[contentMetadataKey] else { return false }
-        guard let number = value as? any else { return false }
+        guard let number = value as? NSNumber else { return false }
         guard CFGetTypeID(number) == CFBooleanGetTypeID() else { return false }
         return number.boolValue
     }

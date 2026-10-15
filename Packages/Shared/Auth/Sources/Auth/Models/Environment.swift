@@ -1,6 +1,6 @@
 import Foundation
 
-public enum Enviornment: Sendable {
+public enum Environment: Sendable {
     case development
     case production
 }

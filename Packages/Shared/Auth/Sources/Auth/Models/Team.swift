@@ -2,6 +2,7 @@ import Foundation
 
 public struct Team: Codable, Equatable, Identifiable, Sendable {
     public let teamId: String
+    public var id: String { teamId }
     public let name: String
     public let slug: String?
 
