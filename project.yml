@@ -1,0 +1,6 @@
+name: muxctl
+targets:
+  muxctl:
+    type: application
+    platform: iOS
+    sources: [Source]
