@@ -1,0 +1,5 @@
+{
+  "name": "muxctl-fleet",
+  "main": "src/index.mjs",
+  "workers_dev": true,
+}
